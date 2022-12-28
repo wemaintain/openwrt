@@ -41,3 +41,13 @@ define Device/radxa_rock-pi-4a
   IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
 endef
 TARGET_DEVICES += radxa_rock-pi-4a
+
+define Device/radxa_cm3-rpi-cm4-io
+  DEVICE_MODEL := ROCK3 CM3 RPI CM4 IO
+  SOC := rk3566
+  SUPPORTED_DEVICES := radxa,cm3-io
+  UBOOT_DEVICE_NAME := rock-3a-rk3568
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script cm3-rpi-cm4-io | pine64-img | gzip | append-metadata
+endef
+TARGET_DEVICES += radxa_cm3-rpi-cm4-io
+
